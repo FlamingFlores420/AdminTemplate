@@ -1,0 +1,193 @@
+.container{
+    width: 100%;
+}
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+  
+}
+
+.logo-container {
+    flex: 0 0 auto; /* Don't grow, don't shrink, stay at initial size */
+}
+
+.logo {
+    max-width: 200px; /* Adjust the size as needed */
+}
+
+.search-profile-container {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    flex: 1; /* Take up available space */
+    margin-right: 1rem; 
+    border: 1px solid transparent;
+    /* Add some spacing between search and profile section */
+    padding-left: 10px;
+}
+
+.search form{
+    min-height: 60px;
+    max-width: 300px;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    border-radius: 15px;
+    justify-content: space-around;
+}
+
+.search input[type="search"]{
+    height: 30px;
+    min-width: 200px;
+    background-color: transparent;
+    border: none; 
+    padding: 0; 
+    background-color: white;
+}
+
+.search input[type="search"]:focus{
+    outline :none;
+}
+
+
+.search button[type="submit"]{
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none; 
+    padding: 0; 
+    cursor: pointer;
+}
+
+.search button[type="submit"] img{
+    height: 40px;
+    width: 40px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    justify-content: space-around;
+    gap: 1.5rem;
+    padding: 10px;
+    padding-right: 30px;
+    margin-left: 1rem; 
+    
+}
+
+.profile img {
+    width: 60px; 
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.profile-settings button{
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: none; 
+    padding: 0; 
+    cursor: pointer;
+}
+.notification-btn img,.settings-btn img{
+    width: 25px;
+    height: 25px;
+}
+.profile-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name,
+.profile-poste {
+    margin: 0; /* Reset margin */
+}
+.profile-poste{
+    font-style: normal;
+    font-family: 'Outfit';
+    font-weight: lighter ;
+}
+
+@media screen {
+    
+}
+
+/* -------------------------- Theme toggle -------------------------- */
+
+.right-side .theme-toggler .theme-switch{
+    width: 5rem;
+    height: 100%;
+    position: relative;
+    border: 2px solid grey;
+    border-radius: var(--border-radius-3);
+    padding: 0 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.right-side .theme-toggler input[type="checkbox"]{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    left: 0;
+    z-index: 1;
+}
+.right-side .theme-toggler .toggle-button{
+    height: 1.2rem;
+    width: 1.29rem;
+    border: 1px solid var(--clr-black);
+    border-radius: 50%;
+    left: 0;
+    transition: all .5s ease;
+}
+.theme-toggler .theme-switch #light-mode{
+    order: 1;
+    
+}
+.theme-toggler .theme-switch .toggle-button{
+    order: 2;
+    transition: all .5s ease;
+}
+.theme-toggler .theme-switch #dark-mode{
+    order: 3;
+}
+
+.theme-toggler input[type="checkbox"]:checked + .toggle-button{
+    /* left: 60%; */
+    margin-left: auto;
+    transition: left 0.2s ease-out;
+}
+.theme-toggler input[type="checkbox"]:not(:checked) + .toggle-button{
+    /* left: 5%; */
+    margin-left: 0;
+    transition: left 0.2s ease-out;
+}
+
+.theme-toggler input[type="checkbox"]:checked ~ #dark-mode {
+    display: none;
+}
+
+.theme-toggler input[type="checkbox"]:not(:checked) ~ #light-mode {
+    display: none;
+    
+}
