@@ -700,7 +700,7 @@ main .recent-archives a{
 
 /* <------------ Phones Media Queries ------------> */
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1000px){
     .container{
         width: 100%;
         grid-template-columns: repeat(1,1fr);
